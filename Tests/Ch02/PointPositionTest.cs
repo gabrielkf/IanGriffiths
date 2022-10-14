@@ -28,13 +28,25 @@ namespace Tests.Ch02
             var result = PointPosition.GetDescription(point);
             Assert.Equal("X axis", result);
         }
-        
+
         [Fact]
-        public void GetDescription_ShouldIndicateOther()
+        public void GetDescription_ShouldAppointQuadrant()
         {
-            (float, float) point = (22, -13);
+            (float, float) point = (22, 22);
             var result = PointPosition.GetDescription(point);
-            Assert.Equal("Anywhere", result);
+            Assert.Equal("On the 1st quadrant", result);
+
+            point = (-22, 22);
+            result = PointPosition.GetDescription(point);
+            Assert.Equal("On the 2nd quadrant", result);
+
+            point = (-22, -22);
+            result = PointPosition.GetDescription(point);
+            Assert.Equal("On the 3rd quadrant", result);
+
+            point = (22, -22);
+            result = PointPosition.GetDescription(point);
+            Assert.Equal("On the 4th quadrant", result);
         }
     }
 }
