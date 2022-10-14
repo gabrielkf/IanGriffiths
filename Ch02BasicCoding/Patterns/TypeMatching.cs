@@ -6,8 +6,9 @@ namespace Ch02BasicCoding.Patterns
         {
             return input switch
             {
+                string { Length: 0 } => "It's an empty string",
                 string s => $"It's a string, and it says: {s}",
-                int n => $"It's an integer with value: {n}",
+                int n => $"It's number with value: {n}",
                 bool b => $"It's a boolean, and it's {b}",
                 _ => "It's not a string, integer or boolean"
             };

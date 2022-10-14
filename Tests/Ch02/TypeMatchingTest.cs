@@ -26,7 +26,7 @@ namespace Tests.Ch02
         {
             bool boolean = false;
             var result = TypeMatching.FindType(boolean);
-            Assert.Equal($"It's a boolean, and it's {boolean}", result);
+            Assert.Equal($"It's a boolean, and it's {boolean.ToString()}", result);
         }
 
         [Fact]
@@ -35,6 +35,13 @@ namespace Tests.Ch02
             float number = 0;
             var result = TypeMatching.FindType(number);
             Assert.Equal("It's not a string, integer or boolean", result);
+        }
+
+        [Fact]
+        public void FindType_ShouldIndicateEmptyString()
+        {
+            var result = TypeMatching.FindType(string.Empty);
+            Assert.Equal("It's an empty string", result);
         }
     }
 }
