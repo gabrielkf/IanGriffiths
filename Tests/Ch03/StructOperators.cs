@@ -17,7 +17,7 @@ namespace Tests.Ch03
         }
         
         [Fact]
-        public void SimplePoint_ShouldBeAbleToCompare_Equality()
+        public void SimplePoint_ShouldBeAbleToCompare_DoubleEqual()
         {
             Assert.True(p1 == p2);
             Assert.False(p1 == p3);
@@ -30,6 +30,14 @@ namespace Tests.Ch03
             Assert.True(p1 != p3);
             Assert.True(p2 != p3);
             Assert.False(p1 != p2);
+        }
+
+        [Fact]
+        public void SimplePoint_ShouldBeAbleToCompare_EqualsMethod()
+        {
+            Assert.True(p1.Equals(p2));
+            Assert.False(p1.Equals(p3));
+            Assert.False(p2.Equals(p3));
         }
     }
 }

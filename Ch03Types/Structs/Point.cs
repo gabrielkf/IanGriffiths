@@ -23,5 +23,10 @@ namespace Ch03Types.Structs
         {
             return p1.X != p2.X || p1.Y != p2.Y;
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Point p2 && this.X == p2.X && this.Y == p2.Y;
+        }
     }
 }

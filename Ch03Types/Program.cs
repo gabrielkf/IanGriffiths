@@ -1,4 +1,5 @@
 ﻿using System;
+using Ch03Types.Structs;
 
 namespace Ch03Types
 {
