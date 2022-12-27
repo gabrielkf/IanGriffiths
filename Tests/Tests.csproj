@@ -15,6 +15,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Ch02BasicCoding\Ch02BasicCoding.csproj" />
+      <ProjectReference Include="..\Ch03Types\Ch03Types.csproj" />
     </ItemGroup>
 
 </Project>

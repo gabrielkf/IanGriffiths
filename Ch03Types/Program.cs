@@ -6,8 +6,7 @@ namespace Ch03Types
     {
         static void Main(string[] args)
         {
-            var text = "args.ToString()";
-            PrintText(text);
+            PrintText("Chapter 03. Run tests");
         }
 
         static void PrintText(string? text)

@@ -6,7 +6,7 @@ namespace Ch02BasicCoding
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Chapter 02, check unit tests");
         }
     }
 }
