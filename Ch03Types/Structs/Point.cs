@@ -28,5 +28,10 @@ namespace Ch03Types.Structs
         {
             return obj is Point p2 && this.X == p2.X && this.Y == p2.Y;
         }
+
+        public override int GetHashCode()
+        {
+            return (_x, _y).GetHashCode();
+        }
     }
 }
