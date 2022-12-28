@@ -33,5 +33,11 @@ namespace Ch03Types.Structs
         {
             return (_x, _y).GetHashCode();
         }
+
+        public void Deconstruct(out double x, out double y)
+        {
+            x = _x;
+            y = _y;
+        }
     }
 }
