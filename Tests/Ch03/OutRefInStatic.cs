@@ -13,5 +13,15 @@ namespace Tests.Ch03
             Assert.Equal(17, quotient);
             Assert.Equal(1, remainder);
         }
+
+        [Fact]
+        public void GetRectArea_ShouldPerformBetter_WithInVariable()
+        {
+            var rect = new Rect(4.20, 6.9, 4.20, 6.9);
+            // todo: measure performance
+            var result = 4.20 * 6.90;
+            Assert.Equal(StaticMethods.GetRectArea(rect), result);
+            Assert.Equal(StaticMethods.GetInRectArea(rect), result);
+        }
     }
 }
