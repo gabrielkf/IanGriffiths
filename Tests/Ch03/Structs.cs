@@ -3,13 +3,13 @@ using Xunit;
 
 namespace Tests.Ch03
 {
-    public class StructOperators
+    public class Structs
     {
         private Point p1;
         private Point p2;
         private Point p3;
         
-        public StructOperators()
+        public Structs()
         {
             p1 = new Point(6.9, 4.20);
             p2 = new Point(6.9, 4.20);

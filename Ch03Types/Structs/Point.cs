@@ -26,7 +26,7 @@ namespace Ch03Types.Structs
 
         public override bool Equals(object obj)
         {
-            return obj is Point p2 && this.X == p2.X && this.Y == p2.Y;
+            return obj is Point p && this.X == p.X && this.Y == p.Y;
         }
 
         public override int GetHashCode()
