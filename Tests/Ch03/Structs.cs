@@ -44,8 +44,8 @@ namespace Tests.Ch03
         public void Point_ShouldDeconstruct()
         {
             (double x, double y) = p1;
-            Assert.Equal(x, p1.X);
-            Assert.Equal(y, p1.Y);
+            Assert.Equal(p1.X, x);
+            Assert.Equal(p1.Y, y);
         }
     }
 }

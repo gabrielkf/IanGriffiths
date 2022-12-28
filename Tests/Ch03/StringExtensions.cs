@@ -28,7 +28,7 @@ namespace Tests.Ch03
         public void PlusOne_ShouldAddOne()
         {
             var n = 1;
-            Assert.Equal(n.PlusOne(), 2);
+            Assert.Equal(2, n.PlusOne());
         }
     }
 }
