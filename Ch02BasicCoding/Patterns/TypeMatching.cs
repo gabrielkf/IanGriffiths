@@ -10,7 +10,7 @@ namespace Ch02BasicCoding.Patterns
                 string s => $"It's a string, and it says: {s}",
                 int n => $"It's number with value: {n}",
                 bool b => $"It's a boolean, and it's {b}",
-                _ => "It's not a string, integer or boolean"
+                _ => "It's not a string, integer nor boolean"
             };
         }
     }
