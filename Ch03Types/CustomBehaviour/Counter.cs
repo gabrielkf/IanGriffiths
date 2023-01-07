@@ -24,5 +24,13 @@ namespace Ch03Types.ExtensionMethods
         public static bool operator ==(Counter x, Counter y) => x._count == y._count;
 
         public static bool operator !=(Counter x, Counter y) => x._count != y._count;
+
+        public static bool operator >(Counter x, Counter y) => x._count > y._count;
+
+        public static bool operator <(Counter x, Counter y) => x._count < y._count;
+        
+        public static bool operator >=(Counter x, Counter y) => x._count >= y._count;
+
+        public static bool operator <=(Counter x, Counter y) => x._count <= y._count;
     }
 }

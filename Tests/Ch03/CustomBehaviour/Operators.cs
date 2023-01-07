@@ -33,5 +33,18 @@ namespace Tests.Ch03
             Assert.False(_a == _b);
             Assert.True(_a == c);
         }
+
+        [Fact]
+        public void Counter_ShouldCompare_GreaterSmallerEquals()
+        {
+            var c = _a - _b;
+            Assert.True(_a > _b);
+            Assert.False(_b > c);
+
+            c.GetNextValue();
+            Assert.True(c >= _a);
+            Assert.True(_b <= c);
+            Assert.False(_b >= _a);
+        }
     }
 }
