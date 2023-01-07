@@ -36,5 +36,7 @@ namespace Ch03Types.ExtensionMethods
         public static explicit operator int(Counter c) => c._count;
 
         public static explicit operator bool(Counter c) => c._count > 0;
+
+        public static explicit operator Counter(int value) => new Counter { _count = value };
     }
 }

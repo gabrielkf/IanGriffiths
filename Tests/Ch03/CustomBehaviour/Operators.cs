@@ -66,5 +66,15 @@ namespace Tests.Ch03
             Assert.True(n);
             Assert.False(m);
         }
+
+        [Fact]
+        public void Counter_ShouldBeCast_FromInt()
+        {
+            var num = 3;
+            var c = (Counter)num;
+            
+            Assert.Equal(typeof(Counter), c.GetType());
+            Assert.Equal(4, c.GetNextValue());
+        }
     }
 }
