@@ -32,5 +32,9 @@ namespace Ch03Types.ExtensionMethods
         public static bool operator >=(Counter x, Counter y) => x._count >= y._count;
 
         public static bool operator <=(Counter x, Counter y) => x._count <= y._count;
+
+        public static explicit operator int(Counter c) => c._count;
+
+        public static explicit operator bool(Counter c) => c._count > 0;
     }
 }

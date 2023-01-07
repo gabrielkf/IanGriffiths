@@ -46,5 +46,25 @@ namespace Tests.Ch03
             Assert.True(_b <= c);
             Assert.False(_b >= _a);
         }
+
+        [Fact]
+        public void Counter_ShouldCast_ToInt()
+        {
+            var n = (int)_a;
+            var m = (int)_b;
+            Assert.Equal(2, n);
+            Assert.Equal(1, m);
+        }
+
+        [Fact]
+        public void Counter_ShouldCast_ToBool()
+        {
+            var c = _b - _a;
+            var n = (bool)_a;
+            var m = (bool)c;
+            
+            Assert.True(n);
+            Assert.False(m);
+        }
     }
 }
