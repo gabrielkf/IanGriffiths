@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Ch02BasicCoding.Patterns;
 using Xunit;
 
@@ -25,7 +26,7 @@ namespace Tests.Ch02
         public void FindType_ShouldIdentifyBoolean()
         {
             bool boolean = false;
-            var result = TypeMatching.FindType(boolean);
+            var result = TypeMatching.FindType(false);
             Assert.Equal($"It's a boolean, and it's {boolean.ToString()}", result);
         }
 
@@ -34,7 +35,7 @@ namespace Tests.Ch02
         {
             float number = 0;
             var result = TypeMatching.FindType(number);
-            Assert.Equal("It's not a string, integer or boolean", result);
+            Assert.Equal("It's not a string, integer nor boolean", result);
         }
 
         [Fact]
@@ -42,6 +43,13 @@ namespace Tests.Ch02
         {
             var result = TypeMatching.FindType(string.Empty);
             Assert.Equal("It's an empty string", result);
+        }
+
+        [Fact]
+        public void FindType_ShouldIndicateCollection()
+        {
+            var result = TypeMatching.FindType(new List<int>());
+            Assert.Equal("It's a Collection", result);
         }
     }
 }
