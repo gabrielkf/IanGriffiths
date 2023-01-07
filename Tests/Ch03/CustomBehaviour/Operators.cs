@@ -15,17 +15,23 @@ namespace Tests.Ch03
         }
         
         [Fact]
-        public void Counter_ShouldSumCounters_ToNewCounter()
+        public void Counter_ShouldAddAndSubtractCounters_ToNewCounter()
         {
             var c = _a + _b;
+            var d = _a - _b;
+
             Assert.Equal(4, c.GetNextValue());
+            Assert.Equal(2, d.GetNextValue());
         }
-        
+
         [Fact]
-        public void Counter_ShouldSubtractCounters_ToNewCounter()
+        public void Counter_ShouldCompare_EqualAndDifferent()
         {
             var c = _a - _b;
-            Assert.Equal(2, c.GetNextValue());
+            c.GetNextValue();
+            Assert.True(_a != _b);
+            Assert.False(_a == _b);
+            Assert.True(_a == c);
         }
     }
 }

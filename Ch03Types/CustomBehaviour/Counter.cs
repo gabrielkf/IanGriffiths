@@ -20,5 +20,9 @@ namespace Ch03Types.ExtensionMethods
 
         public static Counter operator -(Counter x, Counter y) =>
             new Counter() { _count = x._count - y._count };
+
+        public static bool operator ==(Counter x, Counter y) => x._count == y._count;
+
+        public static bool operator !=(Counter x, Counter y) => x._count != y._count;
     }
 }
